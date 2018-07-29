@@ -13,7 +13,9 @@ public class AutomationTesting {
 		
 		WebDriver driver = new ChromeDriver();
 		driver.get("http://www.google.com");
+		System.out.println(driver.getTitle());
 		driver.close();
+		
 		
 		
 	}
