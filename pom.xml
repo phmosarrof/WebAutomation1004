@@ -5,4 +5,11 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>WebAutomation1004</name>
   <description>WebAutomation1004</description>
+  <dependencies>
+  	<dependency>
+  		<groupId>org.seleniumhq.selenium</groupId>
+  		<artifactId>selenium-java</artifactId>
+  		<version>3.13.0</version>
+  	</dependency>
+  </dependencies>
 </project>
