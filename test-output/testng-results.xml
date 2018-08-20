@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="9745" started-at="2018-08-20T19:51:50Z" finished-at="2018-08-20T19:52:00Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="9745" started-at="2018-08-20T19:51:50Z" finished-at="2018-08-20T19:52:00Z">
+      <class name="assertionsExamples.TestNGAsserts">
+        <test-method status="PASS" signature="testNGAsserts()[pri:0, instance:assertionsExamples.TestNGAsserts@56f4468b]" name="testNGAsserts" duration-ms="9734" started-at="2018-08-20T15:51:50Z" finished-at="2018-08-20T15:52:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNGAsserts -->
+      </class> <!-- assertionsExamples.TestNGAsserts -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
