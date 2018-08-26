@@ -1,4 +1,4 @@
-package abc_practices;
+package mavenProject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -8,48 +8,36 @@ public class GoogleFooterLinks {
 
 	public static void main(String[] args) throws InterruptedException {
 
-		System.setProperty("webdriver.driver.chrome", "C:/Users/Mosarrof Hossain/Utilities/chromedriver.exe");
 
+		System.setProperty("webdriver.driver.chrome", "C:/Users/Mosarrof Hossain/Utilities/chromedriver.exe");
+		
 		WebDriver driver = new ChromeDriver();
 		
-		GoogleFooterLinks footer = new GoogleFooterLinks();
-		footer.privacy(driver);
-		footer.terms(driver);
-		footer.settings(driver);
-	}
-		//driver.manage().window().maximize();
-		
-	void privacy (WebDriver driver) throws InterruptedException {
-		
 		driver.get("https://www.google.com/");
-		driver.findElement(By.linkText("Privacy")).click();
+		driver.manage().window().maximize();
+		Thread.sleep(2000);
 
+		driver.findElement(By.linkText("Privacy")).click();
+		
 		if(driver.getPageSource().contains("Privacy"))
 			System.out.println(" The footer link test 01 Passed");
 		else
 			System.out.println("The footer link test 01 failed");
-
+		
 		Assert.assertEquals(true, driver.getPageSource().contains("Privacy"));
 		Assert.assertEquals(4, 2+2);
-
 		Thread.sleep(2000);
 		driver.navigate().back();
-	}
-
-	void terms(WebDriver driver) throws InterruptedException {
-		driver.get("https://www.google.com/");
+		
 		driver.findElement(By.linkText("Terms")).click();
 		if(driver.getPageSource().contains("Terms"))
 			System.out.println(" The footer link test 02 Passed");
 		else
 			System.out.println("The footer link test 02 failed");
 		Assert.assertEquals(true, driver.getPageSource().contains("Terms"));
-
 		Thread.sleep(2000);
 		driver.navigate().back();		
-	}
-	void settings (WebDriver driver) throws InterruptedException {
-		driver.get("https://www.google.com/");
+
 		driver.findElement(By.linkText("Settings")).click();
 		if(driver.getPageSource().contains("Settings"))
 			System.out.println(" The footer link test 03 Passed");
@@ -60,5 +48,8 @@ public class GoogleFooterLinks {
 		Thread.sleep(2000);
 
 		driver.close();
+
+
 	}
+
 }
