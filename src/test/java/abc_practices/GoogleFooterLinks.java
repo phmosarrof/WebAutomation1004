@@ -11,17 +11,16 @@ public class GoogleFooterLinks {
 		System.setProperty("webdriver.driver.chrome", "C:/Users/Mosarrof Hossain/Utilities/chromedriver.exe");
 
 		WebDriver driver = new ChromeDriver();
-		
+
 		GoogleFooterLinks footer = new GoogleFooterLinks();
 		footer.privacy(driver);
 		footer.terms(driver);
 		footer.settings(driver);
 	}
-		//driver.manage().window().maximize();
-		
+
 	void privacy (WebDriver driver) throws InterruptedException {
-		
 		driver.get("https://www.google.com/");
+		driver.manage().window().maximize();
 		driver.findElement(By.linkText("Privacy")).click();
 
 		if(driver.getPageSource().contains("Privacy"))
@@ -35,9 +34,9 @@ public class GoogleFooterLinks {
 		Thread.sleep(2000);
 		driver.navigate().back();
 	}
-
 	void terms(WebDriver driver) throws InterruptedException {
 		driver.get("https://www.google.com/");
+		driver.manage().window().maximize();
 		driver.findElement(By.linkText("Terms")).click();
 		if(driver.getPageSource().contains("Terms"))
 			System.out.println(" The footer link test 02 Passed");
@@ -50,6 +49,8 @@ public class GoogleFooterLinks {
 	}
 	void settings (WebDriver driver) throws InterruptedException {
 		driver.get("https://www.google.com/");
+		driver.manage().window().maximize();
+	
 		driver.findElement(By.linkText("Settings")).click();
 		if(driver.getPageSource().contains("Settings"))
 			System.out.println(" The footer link test 03 Passed");
@@ -58,7 +59,6 @@ public class GoogleFooterLinks {
 		Assert.assertEquals(true, driver.getPageSource().contains("Settings"));
 
 		Thread.sleep(2000);
-
 		driver.close();
 	}
 }
